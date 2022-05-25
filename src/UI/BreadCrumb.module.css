@@ -1,0 +1,44 @@
+.breadcrumb {
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.breadcrumb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .4);
+}
+
+.breadcrumb img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.text {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+}
+ .text h1 {
+     color:  white;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.text span {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+}
