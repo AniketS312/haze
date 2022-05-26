@@ -19,9 +19,12 @@
     font-family: 'DM Serif Display', serif;
     font-weight: 500;
     letter-spacing: .3rem;
+    background-color: transparent;
+    border: none;
+    color: rgb(151,126,79);
 }
 
-.menu ul {
+.menu nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,14 +32,17 @@
     list-style: none;
 }
 
-.menu ul li a {
+.menu nav > * {
     cursor: pointer;
     font-size: 2rem;
     font-family: 'DM Serif Display', sans-serif;
     letter-spacing: .2rem;
+    text-decoration: none;
+    color: rgb(151,126,79);
     transition: all .5s;
+
 }
 
-.menu ul li a:hover {
+.menu nav > *:hover {
     color: white;
 }
