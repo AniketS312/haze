@@ -69,7 +69,7 @@ const ContactUs = () => {
         <BreadCrumb
             img={ContactImg}
             imgAlt='Camera taking a photo of the sunset' 
-            pageTitle='ContactUs'
+            pageTitle='Contact Us'
             crumb='Home / Contact Us'
             />
         <ContactInfo />

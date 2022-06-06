@@ -1,4 +1,5 @@
 import Header from './UI/Header';
+import HeaderMobile from './UI/HeaderMobile'
 import Home from './Components/Home';
 import AboutUs from './Components/AboutUs';
 import Portfolio from './Components/Portfolio'
@@ -13,11 +14,20 @@ import {
 
 import classes from './App.module.css';
 
+function RenderHeader() {
+  if(window.innerWidth <= 820) {
+    return <HeaderMobile />
+  }
+  return <Header />
+}
+
+
 function App() {
   return (
     <div className={classes.app}>
        <BrowserRouter>
-       <Header />
+
+        {window.onresize =  <RenderHeader />}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="aboutus" element={<AboutUs />} />

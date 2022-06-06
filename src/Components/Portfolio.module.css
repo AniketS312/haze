@@ -1,0 +1,42 @@
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1r;
+    grid-template-areas: 
+    "imgone imgtwo imgthree"
+    "imgone imgfive imgthree"
+    "imgfour imgfive imgsix";
+    gap: 10px;
+    width: 100%;
+}
+
+.images img {
+    object-fit: cover;
+    width: 100%;   
+    height: 100%;
+    border-radius: 5px; 
+}
+
+.imgone {
+    grid-area: imgone;
+}
+
+.imgtwo {
+    grid-area: imgtwo;
+}
+
+.imgthree {
+    grid-area: imgthree;
+}
+
+.imgfour {
+    grid-area: imgfour;
+}
+
+.imgfive {
+    grid-area: imgfive;
+}
+
+.imgsix {
+    grid-area: imgsix;
+}

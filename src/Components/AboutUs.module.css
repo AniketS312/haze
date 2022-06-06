@@ -67,3 +67,24 @@
 }
 
 /* End of Quote Section */
+
+/* Media Queries BreakPoint - 1 */
+
+@media only screen and (max-width: 1430px) {
+    .textcontent,
+    .quote,
+    .client {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textcontent img {
+        height: 40vh;
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    .quote img {
+        margin: 0 auto;
+    }
+}
