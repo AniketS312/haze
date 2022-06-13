@@ -26,7 +26,6 @@ function App() {
   return (
     <div className={classes.app}>
        <BrowserRouter>
-
         {window.onresize =  <RenderHeader />}
           <Routes>
             <Route path="/" element={<Home />} />

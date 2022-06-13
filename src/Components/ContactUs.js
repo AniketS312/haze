@@ -14,15 +14,15 @@ const ContactInfo = () => {
             <div className={classes.contact}>
                 <div>
                     <h5>Address</h5>
-                    <p>Address Here</p>
+                    <p>154 Whyte Ave</p>
                 </div>
                 <div>
                     <h5>Phone</h5>
-                    <p>Phone Here</p>
+                    <p>(403)-599-9890</p>
                 </div>
                 <div>
                     <h5>Mail</h5>
-                    <p>Mail Here</p>
+                    <p>haze@support.com</p>
                 </div>
             </div>
         </section>
@@ -31,8 +31,8 @@ const ContactInfo = () => {
 
 const ContactForm = () => {
     return (
-        <section className={classes.contact}>
-            <h3>SEND a Letter</h3>
+        <section className={classes.contactform}>
+            <h3>send a Letter</h3>
             <form className={classes.form}>
                 <Input 
                 type="text"

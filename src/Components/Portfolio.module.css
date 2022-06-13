@@ -40,3 +40,14 @@
 .imgsix {
     grid-area: imgsix;
 }
+
+@media only screen and (max-width: 1200px) {
+    .images {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "imgone imgtwo"
+        "imgthree imgfour"
+        "imgfive imgsix";
+    }
+}
