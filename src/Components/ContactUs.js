@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
 import BreadCrumb from "../UI/BreadCrumb";
-import Input from "../UI/Input";
 
 import ContactImg from '../Assets/contact-us.jpg'
 
@@ -27,34 +26,50 @@ const ContactInfo = () => {
             </div>
         </section>
     )
-}
+}   
 
 const ContactForm = () => {
+    const [name, setName] = useState("Full Name");
+    const [email, setEmail] = useState("Email");
+    const [subject, setSubject] = useState("Subject");
+    const [phone, setPhone] = useState("Phone Number");
+    const [message, setMessage] = useState("Your Message")
+
     return (
         <section className={classes.contactform}>
             <h3>send a Letter</h3>
             <form className={classes.form}>
-                <Input 
+                <input 
                 type="text"
-                value="Your Name"
+                value={name}
+                onClick = {() => setName('')}
+                onChange={e => setName(e.target.value)}
                 />
-                <Input 
+                <input 
                 type="email"
-                value="Your Email"
+                value={email}
+                onClick = {() => setEmail('')}
+                onChange={e => setEmail(e.target.value)}
                 />
-                <Input 
+                <input 
                 type="text"
-                value="Subject"
+                value={subject}
+                onClick = {e => setSubject('')}
+                onChange={e => setSubject(e.target.value)}
                 />
-                <Input 
+                <input 
                 type="text"
-                value="Your Phone Number"
+                value={phone}
+                onClick = {e => setPhone('')}
+                onChange={e => setPhone(e.target.value)}
                 />
-                <Input 
+                <input 
                 type="text"
-                value="Your Message"
+                value={message}
+                onClick = {e => setMessage('')}
+                onChange={e => setMessage(e.target.value)}
                 />
-                <Input 
+                <input 
                 type="submit"
                 value="Send Message"
                 />
