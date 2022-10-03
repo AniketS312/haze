@@ -15,7 +15,7 @@
 
 
 .logo {
-    font-size: 4rem;
+    text-decoration: none;
     font-family: 'DM Serif Display', serif;
     font-weight: 500;
     letter-spacing: .3rem;
@@ -45,4 +45,38 @@
 
 .menu nav > *:hover {
     color: white;
+}
+
+@media only screen and (max-width: 2561px) {
+    .header .logo {
+        font-size: 5rem;
+    }
+
+    .header nav > * {
+        font-size: 3rem;
+        letter-spacing: .5rem;
+    }
+
+}
+
+@media only screen and (max-width: 1501px) {
+    .header .logo {
+        font-size: 4rem;
+    }
+
+    .header nav > * {
+        font-size: 2rem;
+        letter-spacing: .5rem;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .header .logo {
+        font-size: 3rem;
+    }
+
+    .header nav > * {
+        font-size: 1.8rem;
+        letter-spacing: .3rem;
+    }
 }

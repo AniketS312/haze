@@ -7,7 +7,7 @@ return (
     <section className={classes.home}>
         <div className={classes.textcontent}>
             <h1>I'm Haze</h1>
-            <p>Professional Photographer & Editor</p>
+            <p>Professional Photographer &#38; Editor</p>
         </div>
         
     </section>

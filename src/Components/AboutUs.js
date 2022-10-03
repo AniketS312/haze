@@ -20,7 +20,7 @@ import LogoFive from '../Assets/logo/Symbol-18.svg'
 const WhoIAm = (props) => {
     return (
     <section className={classes.whoiam}>
-        <h2>Hi, My name is Haze Ellinger. I'm <br /> a photographer based in Edmonton, Alberta.<br /> And I want to help</h2>
+        <h2>Hi, My name is Haze Ellinger. I'm a photographer based in Edmonton, Alberta. And I want to help</h2>
         <div className={classes.textcontent}>
             <img src={props.MyImg} alt="Haze the photographer" />
             <div>
@@ -63,10 +63,10 @@ const Quote = () => {
                 <span>"Life is like a camera. Just focus on what's important and capture the good times, develop from the negatives and if things don't work out, just take another shot."</span>
                 <div className={classes.author}>
                     <h4>-John Donovan</h4>
-                    <p>Cinematograpjy Discovery</p>
+                    <p>Cinematography Discovery</p>
                 </div>
             </div>
-                <img src={QuoteImg} alt="John Donovan"></img>
+            <img src={QuoteImg} alt="John Donovan"></img>
         </section>
     )
 }

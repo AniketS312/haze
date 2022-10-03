@@ -37,6 +37,8 @@
 /* Quote Section */
 
 .quote {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
     gap: 100px;
 }
@@ -45,7 +47,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 .quotetext > * {
@@ -68,23 +69,255 @@
 
 /* End of Quote Section */
 
-/* Media Queries BreakPoint - 1 */
+/* Media Queries BreakPoint */
 
-@media only screen and (max-width: 1430px) {
-    .textcontent,
-    .quote,
-    .client {
-        flex-direction: column;
-        text-align: center;
+@media only screen and (min-width: 2562px) {
+    .whoiam h2 {
+        padding: 0 20%;
+        font-size: 5rem;
     }
 
-    .textcontent img {
-        height: 40vh;
-        width: 50vw;
-        margin: 0 auto;
+    .quote h4 {
+        font-size: 4rem;
+    }
+    .whoiam h3,
+    .client h3,
+    .quote h3 {
+        font-size: 10rem;
+    }
+
+    .whoiam p,
+    .quote p,
+    .client p {
+        font-size: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .quote span {
+        font-size: 5rem;
     }
 
     .quote img {
-        margin: 0 auto;
+        height: 800px;
+        width: auto;
     }
+
+}
+
+@media only screen and (max-width: 2561px) {
+    .whoiam h2 {
+        padding: 0 20%;
+        font-size: 4rem;
+    }
+
+    .quote h4 {
+        font-size: 4rem;
+    }
+    .whoiam h3,
+    .client h3,
+    .quote h3 {
+        font-size: 8rem;
+    }
+
+    .whoiam p,
+    .quote p,
+    .client p {
+        font-size: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .quote span {
+        font-size: 5rem;
+    }
+
+    .quote img {
+        height: 800px;
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 1551px) {
+    .whoiam h2 {
+        padding: 0 8%;
+        font-size: 3rem;
+    }
+
+    .quote h4 {
+        font-size: 2rem;
+    }
+    .whoiam h3,
+    .client h3,
+    .quote h3 {
+        font-size: 3rem;
+    }
+
+    .whoiam p,
+    .quote p,
+    .client p {
+        font-size: 1.8rem;
+        padding-bottom: 4rem;
+    }
+
+    .quote span {
+        font-size: 1.8rem;
+    }
+
+    .quote img {
+        height: 400px;
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 1025px) {
+    .textcontent {
+        flex-direction: column;
+    }
+
+    .textcontent img {
+        margin: auto;
+    }
+
+    .whoiam h2 {
+        padding: 0 5%;
+        font-size: 2rem;
+    }
+
+    .whoiam img {
+        height: 10vh;
+        width: 60%;
+    }
+
+    .quote h4 {
+        font-size: 2rem;
+    }
+    .whoiam h3,
+    .client h3,
+    .quote h3 {
+        font-size: 3rem;
+    }
+
+    .whoiam p,
+    .quote p,
+    .client p {
+        font-size: 1.8rem;
+        padding-bottom: 4rem;
+    }
+
+    .quote span {
+        font-size: 1.5rem;
+    }
+
+    .quote img {
+        height: 400px;
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 769px) {
+    .textcontent {
+        flex-direction: column;
+    }
+
+    .textcontent img {
+        margin: auto;
+    }
+
+    .whoiam h2 {
+        padding: 0 5%;
+        font-size: 2rem;
+    }
+
+    .whoiam img {
+        height: 10vh;
+        width: 60%;
+    }
+
+    .quote h4 {
+        font-size: 2rem;
+    }
+    .whoiam h3,
+    .client h3,
+    .quote h3 {
+        font-size: 3rem;
+    }
+
+    .whoiam p,
+    .quote p,
+    .client p {
+        font-size: 1.8rem;
+        padding-bottom: 4rem;
+    }
+
+    .quote {
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .quote span {
+        font-size: 1.5rem;
+    }
+
+    .quote img {
+        height: 500px;
+        width: auto;
+    }
+
+    .client div {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 426px) {
+    .textcontent {
+        flex-direction: column;
+    }
+
+    .textcontent img {
+        margin: auto;
+    }
+
+    .whoiam h2 {
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.8rem;
+    }
+
+    .textcontent img {
+        height: 100px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .quote h4 {
+        font-size: 2rem;
+    }
+    .whoiam h3,
+    .client h3,
+    .quote h3 {
+        font-size: 3rem;
+    }
+
+    .whoiam p,
+    .quote p,
+    .client p {
+        font-size: 1.8rem;
+        padding-bottom: 4rem;
+    }
+
+    .quote span {
+        font-size: 1.5rem;
+    }
+
+    .quote img {
+        height: 300px;
+        width: auto;
+    }
+
+
 }

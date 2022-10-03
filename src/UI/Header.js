@@ -12,7 +12,7 @@ const Header = () => {
 
 return (
     <div className={classes.header}>
-        <button className={classes.logo}>HAZE</button>
+        <Link to="/"className={classes.logo}>HAZE</Link>
         <menu className={classes.menu}>
             <nav>
             <Link to="/">Home</Link>

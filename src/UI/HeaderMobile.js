@@ -1,50 +1,50 @@
 import React, { useState } from "react";
-import { ReactDOM } from "react";
 
 import classes from './HeaderMobile.module.css'
 
 import { Link } from "react-router-dom";
 
+
+// Mobile menu. using Use state to toggle menu on and off
 const HeaderModule = () => {
     const [triggerModal, setTriggerModal ] = useState(false)
 
-    const toggleFunction = function() {
-        setTriggerModal(true);
+    const toggleMenuFunction = function() {
+        setTriggerModal(state => !state);
     }
+    
     return (
         <div className={classes.header}>
-            <button 
-                className={classes.logo}>HAZE
-                </button>
+            <Link to="/" className={classes.logo}>
+                HAZE
+            </Link>
             <menu className={classes.menu}>
-                <MenuIcon toggle={toggleFunction}  open={triggerModal}
+                <MenuIcon toggle={toggleMenuFunction}
                 menuClass={classes.hamburgermenu}
                 id='hamburgermenu'
                 />
             </menu>  
-            <React.Fragment>
-            {ReactDOM.createPortal(<Nav />, document.getElementById('modal'))}
-        </React.Fragment>    
+           {triggerModal && <Nav exit={toggleMenuFunction} />}
         </div>
     ); 
 }
 
-const Nav = (props, triggerModal) => {
-if (!triggerModal) return null
-
+const Nav = (props) => {
      return(
         <nav className={classes.mobilenav}>
+            <Exit exit={props.exit} />
              <div>
                 <span className={classes.exit}></span>
-                <Link to="/">Home</Link>
-                <Link to="aboutus">About Us</Link>
-                <Link to="portfolio">Portfolio</Link>
-                <Link to="contactus">Contact Us</Link>  
+                <Link onClick={props.exit} to="/">Home</Link>
+                <Link onClick={props.exit} to="aboutus">About Us</Link>
+                <Link onClick={props.exit} to="portfolio">Portfolio</Link>
+                <Link onClick={props.exit} to="contactus">Contact Us</Link>  
             </div>
         </nav>
         )
 }
 
+// Icons for menu
    const MenuIcon = (props) => {   
         return (
             <button id={props.id} className={props.menuClass} onClick={props.toggle}>
@@ -54,6 +54,16 @@ if (!triggerModal) return null
                 <path d="M1 18C1 17.4477 1.44772 17 2 17H8C8.55228 17 9 17.4477 9 18C9 18.5523 8.55228 19 8 19H2C1.44772 19 1 18.5523 1 18Z" clipRule="evenodd" fillRule="evenodd" undefined="1"></path>
                 </svg> 
             </button>        
+        )
+    }
+
+
+    const Exit = (props) => {
+        return(
+            <svg onClick={props.exit}className={classes.exit} width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+                <path d="M22.7071 1.29289C23.0976 1.68342 23.0976 2.31658 22.7071 2.70711L2.70711 22.7071C2.31658 23.0976 1.68342 23.0976 1.29289 22.7071C0.902369 22.3166 0.902369 21.6834 1.29289 21.2929L21.2929 1.29289C21.6834 0.902369 22.3166 0.902369 22.7071 1.29289Z" clipRule="evenodd" fill-rule="evenodd" undefined="1"></path>
+                <path d="M1.29289 1.29289C1.68342 0.902369 2.31658 0.902369 2.70711 1.29289L22.7071 21.2929C23.0976 21.6834 23.0976 22.3166 22.7071 22.7071C22.3166 23.0976 21.6834 23.0976 21.2929 22.7071L1.29289 2.70711C0.902369 2.31658 0.902369 1.68342 1.29289 1.29289Z" clipRule="evenodd" fill-rule="evenodd" undefined="1"></path>
+            </svg>
         )
     }
 export default HeaderModule;

@@ -25,7 +25,7 @@ const Portfolio = () => {
             pageTitle='Portfolio'
             crumb='Home / Portfolio'
             />
-            <section>
+            <section className={classes['images-section']}>
             <h2>My work is my passion<br /> My mission is to breath life into my art<br /> And share it with the world</h2>
                 <div className={classes.images}>
                     <img class="imgone" src={ImageFour} alt="events portfolio one"/>
