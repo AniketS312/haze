@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import ReactDOM from "react-dom";
+
 import classes from './HeaderMobile.module.css'
 
 import { Link } from "react-router-dom";
@@ -24,14 +26,16 @@ const HeaderModule = () => {
                 id='hamburgermenu'
                 />
             </menu>  
-           {triggerModal && <Nav exit={toggleMenuFunction} />}
+           <Nav triggerModal={triggerModal} exit={toggleMenuFunction} />
         </div>
     ); 
 }
 
 const Nav = (props) => {
-     return(
-        <nav className={classes.mobilenav}>
+    if(!props.triggerModal) return null;
+
+     return ReactDOM.createPortal(
+            <nav className={classes.mobilenav}>
             <Exit exit={props.exit} />
              <div>
                 <span className={classes.exit}></span>
@@ -40,7 +44,7 @@ const Nav = (props) => {
                 <Link onClick={props.exit} to="portfolio">Portfolio</Link>
                 <Link onClick={props.exit} to="contactus">Contact Us</Link>  
             </div>
-        </nav>
+        </nav>, document.getElementById('menu-modal')
         )
 }
 

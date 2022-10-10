@@ -38,7 +38,7 @@
 
  .mobilenav {
   z-index: 10;
-  background-color: rgba(0,0,0, .8);
+  background-color: rgba(0,0,0, .90);
   position: fixed;  
   top: 0;
   right: 0;
@@ -67,7 +67,10 @@
     font-size: 2rem;
     display: flex;
     flex-direction: row;
+    padding-bottom: 1rem;
     color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
 }
 
 .mobilenav .exit {
@@ -82,15 +85,19 @@
     .logo {
         text-decoration: none;
     }
+
     .hamburgermenu svg {
         height: 30px;
         width: 30px;
     }
+
+    .mobilenav div > *  {
+        font-size: 3rem;
+    }
 }
 
-@media only screen and (max-width: 769px) {
-    .menu .hamburgermenu {
-        /* height: 100px;
-        width: 100px; */
+@media only screen and (max-width: 500px) {
+    .mobilenav div > *  {
+        font-size: 2rem;
     }
 }
